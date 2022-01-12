@@ -1,0 +1,23 @@
+.textFace{
+  transform: rotateX(-90deg) translateZ(-12px) translateY(10px);
+}
+
+.container{
+  perspective: 1000px;
+  position: relative;
+  /*top:-5px;*/
+}
+
+.container div{
+  backface-visibility: hidden;
+}
+
+.frame{
+  transform-style: preserve-3d;
+}
+
+.frame:hover{
+  animation: openButton 1s forwards;
+}
+
+@keyframes openButton { from { transform: rotateX(0deg)  } to { transform: rotateX(60deg) }  }
