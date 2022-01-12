@@ -1,16 +1,24 @@
 <div class="w-full h-full flex flex-row justify-center">
   <div class="h-full flex flex-col justify-center w-6/12">
-    <div class="border-2 border-neutral-700 h-96 p-2 bg-neutral-800">
-      <div class="h-5/6 flex flex-row justify-start">
-        <div class="w-60 mr-1 border border-white h-full grow-0">
-          <img src="bonjour" class="w-full">
+    <div class="h-96 bg-black">
+      <div class="border-2 border-neutral-700 w-full h-full introAnimation noBackFace p-2 bg-neutral-800">
+        <div class="h-5/6 flex flex-row justify-start">
+          <div class="w-60 mr-1 border border-white h-full flex-none">
+            <img src="bonjour" class="w-full">
+          </div>
+          <div class="grow border border-red-600 h-full p-2 paragrapheFont select-none">
+            <p class="prose text-5xl text-neutral-200">
+              FUCHS Titouan
+            </p>
+            <hr class="mb-3 mt-3 border-t" />
+            <article class="prose text-lg text-neutral-300">
+              Pationné par l'informatique ainsi que les jeux vidéos depuis toujours, j'ai décidé de suivre des études de développeur informatique.
+            </article>
+          </div>
         </div>
-        <div class="grow border border-red-600 h-full">
-
+        <div class="h-1/6 flex flex-row justify-center p-1 mt-1">
+          <ui-button class="w-6/12" buttonText="C'EST PARTI !" [pingButton]="true" secondText="Let's go !"></ui-button>
         </div>
-      </div>
-      <div class="h-1/6 flex flex-row justify-center p-1 mt-1">
-        <ui-button class="w-6/12"></ui-button>
       </div>
     </div>
   </div>

@@ -3,6 +3,10 @@
   font-family: pixel;
 }
 
+.topFace{
+  font-family: titleFont;
+}
+
 .container{
   perspective: 1000px;
   position: relative;

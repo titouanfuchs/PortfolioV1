@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "titleFont";
+  src: url("src/assets/fonts/HOPE-HYPE.ttf");
+}
+
+@font-face {
+  font-family: "paragraphFont";
+  src: url("src/assets/fonts/HWYGWDE.TTF");
+}
+
+@keyframes sectionIntroAnimation { from { transform: rotateX(60deg)  } to { transform: rotateX(0deg) }  }
+
+body{
+  perspective: 900px;
+}
+
+.paragrapheFont{
+  font-family: paragraphFont;
+}
+
+.introAnimation{
+  animation: sectionIntroAnimation 2s forwards;
+}
+
+.noBackFace{
+  backface-visibility: hidden;
+}
