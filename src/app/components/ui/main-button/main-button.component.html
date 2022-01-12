@@ -1,8 +1,17 @@
-<div class="text-blue-50 w-full h-full buttonTrigger">
+<div class="text-blue-50 w-full h-full buttonTrigger bg-black select-none cursor-pointer">
   <div class="w-full h-full container">
     <div class="frame w-full h-full">
-      <div class="bg-neutral-800 border border-neutral-600 w-full h-full"></div>
-      <div class="bg-blue-400 w-full h-[50%] textFace"></div>
+      <div class="bg-neutral-800 relative border border-neutral-600 w-full h-full flex flex-col justify-center p-2">
+        <div *ngIf="pingButton" class="absolute w-2 h-2 z-10 animate-ping rounded-lg bg-white" style="top: 0; right: 0"></div>
+        <div class="w-full text-center text-neutral-600">
+          <h2>{{buttonText}}</h2>
+        </div>
+      </div>
+      <div class="bg-blue-600 border-2 border-white w-full h-[50%] textFace text-center p-2 flex flex-col justify-center glow">
+        <div>
+          <h2>{{secondText}}</h2>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ui-button',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-button.component.css']
 })
 export class MainButtonComponent implements OnInit {
+
+  @Input() buttonText:string = "Boutton";
+  @Input() secondText:string = ">> <<";
+  @Input() pingButton:boolean = false;
 
   constructor() { }
 
