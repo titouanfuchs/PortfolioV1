@@ -1,20 +1,20 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+/p_front/dist
+/p_front/tmp
+/p_front/out-tsc
 # Only exists if Bazel was run
-/bazel-out
+/p_front/bazel-out
 
 # dependencies
-/node_modules
+/p_front/node_modules
 
 # profiling files
-chrome-profiler-events*.json
+p_front/chrome-profiler-events*.json
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
@@ -31,15 +31,15 @@ chrome-profiler-events*.json
 .history/*
 
 # misc
-/.angular/cache
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+/p_front/.angular/cache
+/p_front/.sass-cache
+/p_front/connect.lock
+/p_front/coverage
+/p_front/libpeerconnection.log
+/p_front/npm-debug.log
+/p_front/yarn-error.log
+/p_front/testem.log
+/p_front/typings
 
 # System Files
 .DS_Store
