@@ -8,7 +8,17 @@ import {NavigationService} from "../../services/navigationService/navigation.ser
 })
 export class AboutViewComponent implements OnInit {
 
+  private tab:number = 0;
+
   constructor(private navigation:NavigationService) { }
+
+  get Tab(){
+    return this.tab;
+  }
+
+  changeTab(tab:number){
+    this.tab = tab;
+  }
 
   ngOnInit(): void {
     this.navigation.updateCurrentRoute('about');
