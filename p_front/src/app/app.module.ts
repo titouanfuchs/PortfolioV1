@@ -8,6 +8,7 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
 import { ProjectsViewComponent } from './views/projects-view/projects-view.component';
 import { AboutViewComponent } from './views/about-view/about-view.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeViewComponent,
     ProjectsViewComponent,
     AboutViewComponent,
-    FooterComponent
+    FooterComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

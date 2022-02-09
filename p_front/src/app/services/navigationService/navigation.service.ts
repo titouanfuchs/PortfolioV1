@@ -8,6 +8,7 @@ export class NavigationService {
 
   private navRoute: NavigationItem[] = [
     new NavigationItem('Home', 'home', true),
+    new NavigationItem('About', 'about', false),
     new NavigationItem('Projects', 'projects', false),
   ]
 

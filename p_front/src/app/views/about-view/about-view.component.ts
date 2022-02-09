@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationService} from "../../services/navigationService/navigation.service";
 
 @Component({
   selector: 'app-about-view',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navigation:NavigationService) { }
 
   ngOnInit(): void {
+    this.navigation.updateCurrentRoute('about');
   }
 
 }
