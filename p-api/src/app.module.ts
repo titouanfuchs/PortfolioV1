@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {Projects} from "./routes/projects/projects.entity"
+import {ProjectsModule} from "./routes/projects/projects.module";
 import {Languages} from "./routes/competences/languages.entity";
 import {Technos} from "./routes/competences/technos.entity";
 
@@ -17,7 +18,9 @@ import {Technos} from "./routes/competences/technos.entity";
     entities: [Projects, Languages, Technos],
     autoLoadEntities: true,
     synchronize: process.env.TARGET === "dev"
-  })],
+  }),
+      ProjectsModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
