@@ -23,4 +23,4 @@ RUN npm install
 
 EXPOSE 3000
 
-CMD nest start --exec "nest start --preserveWatchOutput"
+CMD nest start --exec "npm run start:dev"
