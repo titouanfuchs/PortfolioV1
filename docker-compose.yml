@@ -7,7 +7,7 @@ services:
     build: 
       dockerfile: Dockerfile
       context: p-api
-      target: dev
+      target: ${TARGET}
     volumes: 
       - ./p-api:/app
       - /app/node_modules/
@@ -26,7 +26,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: p_front
-      target: dev
+      target: ${TARGET}
     volumes:
       - ./p_front:/app
       - /app/node_modules/
@@ -52,6 +52,6 @@ services:
     image: adminer
     restart: always
     ports:
-      - 8080:8080
+      - ${PORT_ADMINER}:8080
     depends_on:
     - portfolio-bdd

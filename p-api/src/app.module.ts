@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {TypeOrmModule} from "@nestjs/typeorm";
+import {Competence} from "./routes/competences/competence.entity"
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -11,7 +12,7 @@ import {TypeOrmModule} from "@nestjs/typeorm";
     username: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DATABASE,
-    entities: ["dist/**/*.entity{.ts,.js}"],
+    entities: [Competence],
     autoLoadEntities: true,
     synchronize: process.env.TARGET === "dev"
   })],
