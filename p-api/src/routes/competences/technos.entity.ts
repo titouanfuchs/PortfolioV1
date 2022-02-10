@@ -1,12 +1,8 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-
-enum competenceType{
-    techno,
-    language
-}
+import {Projects} from "../projects/projects.entity";
 
 @Entity()
-export class Competence {
+export class Technos {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -14,11 +10,10 @@ export class Competence {
     name: string;
 
     @Column()
-    description: string;
+    icon:string;
 
     @Column()
-    link: string;
+    link:string;
 
-    @Column()
-    type: competenceType
+    projects:Projects[];
 }
