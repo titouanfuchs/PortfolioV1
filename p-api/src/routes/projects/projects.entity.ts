@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToMany, JoinTable} from 'typeorm';
+import {Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToMany, JoinTable, PrimaryColumn, Unique} from 'typeorm';
 import {Technos} from "../competences/technos.entity";
 import {Languages} from "../competences/languages.entity";
 
@@ -7,7 +7,7 @@ export class Projects {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({unique: true})
     name: string;
 
     @Column()
@@ -19,5 +19,8 @@ export class Projects {
 
     @JoinTable({name: 'join_Project-Technos'})
     @ManyToMany(() => Technos, techno => techno.projects)
-    technos: Technos[];//
+    technos: Technos[];
+
+    @Column()
+    pictureID:string;
 }
