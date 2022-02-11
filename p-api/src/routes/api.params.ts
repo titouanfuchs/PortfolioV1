@@ -3,3 +3,9 @@ export const projectIDParam = {
     required: true,
     type: 'string',
 };
+
+export const pictureIdParam = {
+    name: 'pictureID',
+    required: true,
+    type: 'string',
+};
