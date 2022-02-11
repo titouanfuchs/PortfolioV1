@@ -44,6 +44,6 @@ export class ProjectsController {
     @Delete(`:${projectIDParam.name}`)
     @ApiParam(projectIDParam)
     deleteProject(@Query(projectIDParam.name) projectID:string){
-        return this.projectService.findProjectById(projectID);
+        return this.projectService.deleteProject(projectID);
     }
 }

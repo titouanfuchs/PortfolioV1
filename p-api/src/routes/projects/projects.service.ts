@@ -34,6 +34,11 @@ export class ProjectsService {
         return this.projectsRepository.save(projectData);
     }
 
+    public async deleteProject(id:string){
+        const project = await this.projectsRepository.findOne(id);
+        return this.projectsRepository.delete(project);
+    }
+
     public async patchProject(id:string, patchProjectData:PatchProjectDto){
         const project:Projects = await this.findProjectById(id);
         let patchedProject:Projects = new Projects();
