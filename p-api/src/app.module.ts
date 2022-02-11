@@ -6,6 +6,8 @@ import {Projects} from "./routes/projects/projects.entity"
 import {ProjectsModule} from "./routes/projects/projects.module";
 import {Languages} from "./routes/competences/languages.entity";
 import {Technos} from "./routes/competences/technos.entity";
+import {PicturesModule} from "./routes/pictures/pictures.module";
+import {Picture} from "./routes/pictures/picture.entity";
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -15,11 +17,11 @@ import {Technos} from "./routes/competences/technos.entity";
     username: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DATABASE,
-    entities: [Projects, Languages, Technos],
+    entities: [Projects, Languages, Technos, Picture],
     autoLoadEntities: true,
     synchronize: process.env.TARGET === "dev"
   }),
-      ProjectsModule
+      ProjectsModule, PicturesModule
   ],
   controllers: [AppController],
   providers: [AppService],

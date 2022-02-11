@@ -1,6 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToMany, JoinTable, PrimaryColumn, Unique} from 'typeorm';
 import {Technos} from "../competences/technos.entity";
 import {Languages} from "../competences/languages.entity";
+import {Picture} from "../pictures/picture.entity";
 
 @Entity()
 export class Projects {
@@ -22,5 +23,12 @@ export class Projects {
     technos: Technos[];
 
     @Column()
-    pictureID:string;
+    gitLink: string;
+
+    @Column()
+    link:string;
+
+    @JoinTable({name: 'join_Project-Pictures'})
+    @ManyToMany(() => Picture, picture => picture.projects)
+    pictures:Picture[];
 }
