@@ -6,7 +6,7 @@ import {Picture} from "../pictures/picture.entity";
 @Entity()
 export class Projects {
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
 
     @Column({unique: true})
     name: string;
@@ -29,6 +29,9 @@ export class Projects {
     link:string;
 
     @JoinTable({name: 'join_Project-Pictures'})
-    @ManyToMany(() => Picture, picture => picture.projects)
+    @OneToMany(() => Picture, picture => picture.project)
     pictures:Picture[];
+
+    @Column({default: false})
+    isPublic:boolean;
 }

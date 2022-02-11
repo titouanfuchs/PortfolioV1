@@ -11,5 +11,5 @@ export class Picture {
     @Column()
     format: string;
 
-    projects:Projects[];
+    project:Projects;
 }
