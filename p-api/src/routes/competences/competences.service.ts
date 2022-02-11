@@ -16,6 +16,18 @@ export class CompetencesService {
     ){}
 
     findAllLanguages(){
+        return this.languageRepository.find();
+    }
 
+    findAllTechnos(){
+        return this.technosRepository.find();
+    }
+
+    findTechnoByID(id:string){
+        return this.technosRepository.findOne(id);
+    }
+
+    findLanguageByID(id:string){
+        return this.languageRepository.findOne(id);
     }
 }

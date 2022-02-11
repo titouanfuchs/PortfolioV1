@@ -8,6 +8,7 @@ import {Languages} from "./routes/competences/languages.entity";
 import {Technos} from "./routes/competences/technos.entity";
 import {PicturesModule} from "./routes/pictures/pictures.module";
 import {Picture} from "./routes/pictures/picture.entity";
+import {CompetencesModule} from "./routes/competences/competences.module";
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -21,7 +22,7 @@ import {Picture} from "./routes/pictures/picture.entity";
     autoLoadEntities: true,
     synchronize: process.env.TARGET === "dev"
   }),
-      ProjectsModule, PicturesModule
+      ProjectsModule, PicturesModule, CompetencesModule
   ],
   controllers: [AppController],
   providers: [AppService],

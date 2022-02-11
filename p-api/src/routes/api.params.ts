@@ -9,3 +9,9 @@ export const pictureIdParam = {
     required: true,
     type: 'string',
 };
+
+export const languageIdParam = {
+    name: 'langageID',
+    required: true,
+    type: 'string',
+};
