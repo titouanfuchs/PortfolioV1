@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class PatchLanguageDto {
+export class CreateTechnoDto {
     @ApiProperty()
     name?:string;
 

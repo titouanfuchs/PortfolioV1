@@ -10,8 +10,8 @@ export const pictureIdParam = {
     type: 'string',
 };
 
-export const languageIdParam = {
-    name: 'langageID',
+export const idParam = {
+    name: 'id',
     required: true,
     type: 'string',
 };

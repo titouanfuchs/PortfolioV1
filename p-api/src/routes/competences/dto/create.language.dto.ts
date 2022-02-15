@@ -5,5 +5,5 @@ export class CreateLanguageDto {
     name:string;
 
     @ApiProperty()
-    link:string;
+    link?:string;
 }
