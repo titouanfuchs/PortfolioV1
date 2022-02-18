@@ -27,7 +27,7 @@ export class ProjectsService {
 
         project.isPublic = putProjectData.isPublic;
 
-        return this.projectsRepository.save(project);
+        return this.projectsRepository.update(project.id,project);
     }
 
     public createProject(projectData:CreateProjectDto){
@@ -56,6 +56,6 @@ export class ProjectsService {
         patchedProject.technos = project.technos;
         patchedProject.pictures = project.pictures;
 
-        return this.projectsRepository.save(patchedProject);
+        return this.projectsRepository.update(project.id,patchedProject);
     }
 }

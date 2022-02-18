@@ -41,7 +41,7 @@ export class CompetencesService {
         patchedTechno.name = patchTechnoData.name || technoData.name;
         patchedTechno.link = patchTechnoData.link || technoData.link;
 
-        return this.technosRepository.save(patchedTechno);
+        return this.technosRepository.update(technoData.id,patchedTechno);
     }
 
     findLanguageByID(id:string){
@@ -59,7 +59,7 @@ export class CompetencesService {
         patchedLanguage.name = patchLanguageData.name || languageData.name;
         patchedLanguage.link = patchLanguageData.link || languageData.link;
 
-        return this.languageRepository.save(patchedLanguage);
+        return this.languageRepository.update(languageData.id,patchedLanguage);
     }
 
     delete(id:string, type:number){

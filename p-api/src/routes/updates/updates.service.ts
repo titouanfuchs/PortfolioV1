@@ -1,4 +1,9 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class UpdatesService {}
+export class UpdatesService {
+
+    getUpdates(){
+
+    }
+}
