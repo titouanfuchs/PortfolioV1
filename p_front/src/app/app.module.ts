@@ -26,7 +26,8 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
