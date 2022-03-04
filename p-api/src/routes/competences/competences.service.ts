@@ -27,7 +27,10 @@ export class CompetencesService {
     }
 
     findTechnoByID(id:string){
-        return this.technosRepository.findOne(id);
+        return this.technosRepository
+            .createQueryBuilder('techno')
+            .where(`techno.id = ${id}`)
+            .getOne();
     }
 
     createTechno(technoData:CreateTechnoDto){
@@ -35,17 +38,19 @@ export class CompetencesService {
     }
 
     async patchTechno(id:string, patchTechnoData:PatchLanguageDto){
-        const technoData:Technos = await this.technosRepository.findOne(id);
-        let patchedTechno: Technos = new Technos();
+        const technoData:Technos = await this.findTechnoByID(id);
 
-        patchedTechno.name = patchTechnoData.name || technoData.name;
-        patchedTechno.link = patchTechnoData.link || technoData.link;
+        technoData.name = patchTechnoData.name || technoData.name;
+        technoData.link = patchTechnoData.link || technoData.link;
 
-        return this.technosRepository.update(technoData.id,patchedTechno);
+        return this.technosRepository.save(technoData);
     }
 
     findLanguageByID(id:string){
-        return this.languageRepository.findOne(id);
+        return this.languageRepository
+            .createQueryBuilder('language')
+            .where(`language.id = ${id}`)
+            .getOne();
     }
 
     createLanguage(languageData:CreateLanguageDto){

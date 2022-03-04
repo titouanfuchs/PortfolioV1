@@ -11,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NewsComponent } from './components/news/news.component';
 import { AdminViewComponent } from './views/admin-view/admin-view.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
+import {HttpClientModule} from "@angular/common/http";
+import { CompetenceComponent } from './components/elements/competence/competence.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
     FooterComponent,
     NewsComponent,
     AdminViewComponent,
-    LoginViewComponent
+    LoginViewComponent,
+    CompetenceComponent
   ],
   imports: [
     BrowserModule,

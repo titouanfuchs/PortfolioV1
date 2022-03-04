@@ -20,7 +20,7 @@ import {CompetencesModule} from "./routes/competences/competences.module";
     database: process.env.MYSQL_DATABASE,
     entities: [Projects, Languages, Technos, Picture],
     autoLoadEntities: true,
-    synchronize: process.env.TARGET === "dev"
+    synchronize: /*process.env.TARGET === "dev"*/ false
   }),
       ProjectsModule, PicturesModule, CompetencesModule
   ],

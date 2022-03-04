@@ -6,6 +6,7 @@ import {idParam} from "../api.params";
 import {PatchLanguageDto} from "./dto/patch.language.dto";
 import {query} from "express";
 import {Technos} from "./technos.entity";
+import {CreateTechnoDto} from "./dto/create.techno.dto";
 
 @ApiTags('Compétences')
 @Controller('competences')
@@ -15,8 +16,8 @@ export class CompetencesController {
     }
 
     @Get()
-    getAllCompetences(){
-        return {languages: this.competencesService.findAllLanguages(), technos:this.competencesService.findAllTechnos()};
+    async getAllCompetences(){
+        return {languages: await this.competencesService.findAllLanguages(), technos: await this.competencesService.findAllTechnos()};
     }
 
     @Get('languages')
@@ -50,6 +51,11 @@ export class CompetencesController {
     @Get('technos')
     getAllTechnos(){
         return this.competencesService.findAllTechnos();
+    }
+
+    @Post('technos')
+    createTechno(@Body() technoData:CreateTechnoDto){
+        return this.competencesService.createTechno(technoData);
     }
 
     @Get(`technos/:${idParam.name}`)

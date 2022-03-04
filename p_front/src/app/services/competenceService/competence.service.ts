@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ICompetences} from "../../interfaces/ICompetences";
 import {ILanguage} from "../../interfaces/ilanguage";
+import {ITechno} from "../../interfaces/itechno";
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,9 @@ export class CompetenceService {
 
   public patchLanguage(language:ILanguage){
     return this.http.patch('/api/competence/language', language);
+  }
+
+  public patchTechno(techno:ITechno){
+    return this.http.patch('/api/competence/techno', techno);
   }
 }

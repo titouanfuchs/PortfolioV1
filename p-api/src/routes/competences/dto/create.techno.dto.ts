@@ -6,4 +6,7 @@ export class CreateTechnoDto {
 
     @ApiProperty()
     link?:string;
+
+    @ApiProperty()
+    icon:string;
 }

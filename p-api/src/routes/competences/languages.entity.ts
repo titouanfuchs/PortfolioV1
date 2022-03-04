@@ -10,6 +10,9 @@ export class Languages {
     name: string;
 
     @Column()
+    icon:string;
+
+    @Column()
     link:string;
 
     projects: Projects[];

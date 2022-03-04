@@ -6,4 +6,7 @@ export class PatchLanguageDto {
 
     @ApiProperty()
     link?:string;
+
+    @ApiProperty()
+    icon:string;
 }

@@ -6,4 +6,7 @@ export class CreateLanguageDto {
 
     @ApiProperty()
     link?:string;
+
+    @ApiProperty()
+    icon:string;
 }

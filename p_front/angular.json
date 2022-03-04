@@ -74,7 +74,8 @@
               "browserTarget": "p_front:build:production"
             },
             "development": {
-              "browserTarget": "p_front:build:development"
+              "browserTarget": "p_front:build:development",
+              "proxyConfig": "src/proxy/dev.proxy.config.json"
             }
           },
           "defaultConfiguration": "development"
