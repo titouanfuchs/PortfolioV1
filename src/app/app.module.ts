@@ -26,7 +26,7 @@ import { ProjectComponent } from './components/elements/project/project.componen
     ProjectComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule
   ],
