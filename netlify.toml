@@ -1,6 +1,6 @@
 [build]
   command = "ng build --configuration production && ng run p_front:serverless:production"
-  publish = "dist/portfolio/browser"
+  publish = "dist/p_front/browser"
 
 [[plugins]]
   package = "@netlify/plugin-angular-universal"
