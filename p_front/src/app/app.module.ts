@@ -9,8 +9,6 @@ import { ProjectsViewComponent } from './views/projects-view/projects-view.compo
 import { AboutViewComponent } from './views/about-view/about-view.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewsComponent } from './components/news/news.component';
-import { AdminViewComponent } from './views/admin-view/admin-view.component';
-import { LoginViewComponent } from './views/login-view/login-view.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CompetenceComponent } from './components/elements/competence/competence.component';
 
@@ -23,8 +21,6 @@ import { CompetenceComponent } from './components/elements/competence/competence
     AboutViewComponent,
     FooterComponent,
     NewsComponent,
-    AdminViewComponent,
-    LoginViewComponent,
     CompetenceComponent
   ],
   imports: [

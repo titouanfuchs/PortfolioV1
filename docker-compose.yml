@@ -2,25 +2,6 @@ version: '3.8'
 
 services:
 
-  portfolio-api:
-    container_name: portfolio-API
-    build: 
-      dockerfile: Dockerfile
-      context: p-api
-      target: ${TARGET}
-    volumes: 
-      - ./p-api:/app
-      - /app/node_modules/
-    environment:
-      NODE_ENV: dev
-      PORT: 3000
-    ports:
-      - ${PORT_NEST}:3000
-    env_file:
-      - ./.env
-    depends_on:
-      - portfolio-bdd
-
   portfolio-front:
     container_name: portfolio-FRONT
     build:
@@ -32,26 +13,3 @@ services:
       - /app/node_modules/
     ports:
       - ${PORT_ANGULAR}:4200
-    depends_on:
-      - portfolio-api
-      
-  portfolio-bdd:
-    container_name: portfolio-BDD
-    image: mysql
-    cap_add:
-      - SYS_NICE
-    volumes:
-      - ./portfolio-BDD/data:/var/lib/mysql
-    ports:
-        - ${PORT_BDD}:3306
-    env_file:
-      - ./.env
-      
-  portfolio-adminer:
-    container_name: portfolio-Adminer
-    image: adminer
-    restart: always
-    ports:
-      - ${PORT_ADMINER}:8080
-    depends_on:
-    - portfolio-bdd

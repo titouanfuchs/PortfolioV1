@@ -10,17 +10,26 @@ import {ITechno} from "../../interfaces/itechno";
 })
 export class CompetenceService {
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
-  public getAllCompetences(): Observable<ICompetences>{
-    return this.http.get('/api/competences');
-  }
+  private competenceList:ICompetences = {
+    technos: [
+      {name: "Angular"},
+      {name: "NestJS"},
+      {name: "Unity"},
+      {name: "Windows Form"},
+      {name: "TailwindCSS"}
+    ],
+    languages:[
+      {name:"C#", description:"Maîtrise du langage depuis 2016. Application dans divers projets (voir page projets)."},
+      {name:"JavaScript / TypeScript", description:"Maîtrise du langage depuis 2021. Application dans divers projets (voir page projets)."},
+      {name:"Python"},
+      {name:"PHP"},
+      {name:"SQL"},
+      {name:"CSS"}
+    ]};
 
-  public patchLanguage(language:ILanguage){
-    return this.http.patch('/api/competence/language', language);
-  }
-
-  public patchTechno(techno:ITechno){
-    return this.http.patch('/api/competence/techno', techno);
+  public getAllCompetences(): ICompetences{
+    return this.competenceList;
   }
 }

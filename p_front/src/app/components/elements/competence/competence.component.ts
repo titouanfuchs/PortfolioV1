@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ILanguage} from "../../../interfaces/ilanguage";
+import {ITechno} from "../../../interfaces/itechno";
 
 @Component({
   selector: 'app-competence',
@@ -6,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./competence.component.css']
 })
 export class CompetenceComponent implements OnInit {
+
+  @Input() language:ILanguage = {};
+  @Input() techno:ITechno = {};
+
+  @Input() type:number = 0;
 
   constructor() { }
 

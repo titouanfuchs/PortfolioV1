@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NavigationService} from "../../services/navigationService/navigation.service";
+import {ICompetences} from "../../interfaces/ICompetences";
+import {CompetenceService} from "../../services/competenceService/competence.service";
 
 @Component({
   selector: 'app-about-view',
@@ -10,7 +12,9 @@ export class AboutViewComponent implements OnInit {
 
   private tab:number = 0;
 
-  constructor(private navigation:NavigationService) { }
+  competences:ICompetences = {};
+
+  constructor(private navigation:NavigationService, private competenceService:CompetenceService) { }
 
   get Tab(){
     return this.tab;
@@ -22,6 +26,8 @@ export class AboutViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.navigation.updateCurrentRoute('about');
+
+    this.competences = this.competenceService.getAllCompetences();
   }
 
 }
