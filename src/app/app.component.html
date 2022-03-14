@@ -1,0 +1,8 @@
+<div class="flex flex-col h-screen justify-between">
+  <app-nav-bar class="sticky top-0 z-50" *ngIf="enableNavigation()"></app-nav-bar>
+  <div class="flex-grow">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer *ngIf="enableNavigation()"></app-footer>
+</div>
+19

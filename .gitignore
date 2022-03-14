@@ -1,19 +1,17 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-/portfolio-BDD
-
 # compiled output
-/p_front/dist
-/p_front/tmp
-/p_front/out-tsc
+/dist
+/tmp
+/out-tsc
 # Only exists if Bazel was run
-/p_front/bazel-out
+/bazel-out
 
 # dependencies
-/p_front/node_modules
+node_modules
 
 # profiling files
-p_front/chrome-profiler-events*.json
+/chrome-profiler-events*.json
 
 # IDEs and editors
 .idea
@@ -33,15 +31,15 @@ p_front/chrome-profiler-events*.json
 .history/*
 
 # misc
-/p_front/.angular/cache
-/p_front/.sass-cache
-/p_front/connect.lock
-/p_front/coverage
-/p_front/libpeerconnection.log
-/p_front/npm-debug.log
-/p_front/yarn-error.log
-/p_front/testem.log
-/p_front/typings
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+/npm-debug.log
+/yarn-error.log
+/testem.log
+/typings
 
 # System Files
 .DS_Store
