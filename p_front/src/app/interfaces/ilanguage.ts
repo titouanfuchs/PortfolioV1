@@ -4,6 +4,6 @@ export interface ILanguage {
   id?:string,
   name?:string,
   link?:string,
-  description?:string,
+  master?:number,
   projects?:IProject[];
 }

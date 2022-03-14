@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
 import {ICompetences} from "../../interfaces/ICompetences";
-import {ILanguage} from "../../interfaces/ilanguage";
-import {ITechno} from "../../interfaces/itechno";
 
 @Injectable({
   providedIn: 'root'
@@ -21,12 +17,12 @@ export class CompetenceService {
       {name: "TailwindCSS"}
     ],
     languages:[
-      {name:"C#", description:"Maîtrise du langage depuis 2016. Application dans divers projets (voir page projets)."},
-      {name:"JavaScript / TypeScript", description:"Maîtrise du langage depuis 2021. Application dans divers projets (voir page projets)."},
-      {name:"Python"},
-      {name:"PHP"},
-      {name:"SQL"},
-      {name:"CSS"}
+      {name:"C#", master:80},
+      {name:"JavaScript / TypeScript", master:70},
+      {name:"Python", master:50},
+      {name:"PHP", master:40},
+      {name:"SQL", master:70},
+      {name:"CSS", master:75}
     ]};
 
   public getAllCompetences(): ICompetences{
