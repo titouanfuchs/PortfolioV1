@@ -1,5 +1,5 @@
 [build]
-  command = "ng build --configuration production && ng run portfolio:serverless:production"
+  command = "ng build --configuration production && ng run p_front:serverless:production"
   publish = "dist/portfolio/browser"
 
 [[plugins]]
