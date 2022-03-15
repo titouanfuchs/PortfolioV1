@@ -1,4 +1,8 @@
 [build]
-  command = "npm run prerender"
-  functions = "./functions"
-  publish = "dist/p_front/browser"
+  command="ng build"
+  publish="dist/p_front"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
