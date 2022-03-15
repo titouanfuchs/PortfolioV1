@@ -1,27 +1,11 @@
 <div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none">
-  <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article">
-
   <div id="carouselExampleControls" class="carousel slide relative w-full h-64" data-bs-ride="carousel">
     <div class="carousel-inner relative w-full overflow-hidden">
       <div class="carousel-item active relative float-left w-full">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+        <img *ngFor="let picture of project.pictures; let i = index"
+          [src]="'assets/pictures/projects/' + picture"
           class="block w-full"
-          alt="Wild Landscape"
-        />
-      </div>
-      <div class="carousel-item relative float-left w-full">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-          class="block w-full"
-          alt="Camera"
-        />
-      </div>
-      <div class="carousel-item relative float-left w-full">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-          class="block w-full"
-          alt="Exotic Fruits"
+          alt="Project Picture {{i}}"
         />
       </div>
     </div>
