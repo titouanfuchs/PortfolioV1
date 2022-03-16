@@ -12,6 +12,7 @@ import { NewsComponent } from './components/news/news.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CompetenceComponent } from './components/elements/competence/competence.component';
 import { ProjectComponent } from './components/elements/project/project.component';
+import {CarouselModule} from "@marcreichel/angular-carousel";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ProjectComponent } from './components/elements/project/project.componen
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    HttpClientModule
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
