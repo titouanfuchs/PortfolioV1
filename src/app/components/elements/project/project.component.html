@@ -1,5 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-<div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none">
+<div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none" (click)="openProjectDetails()">
   <angular-carousel [bullets]="false" class="w-full min-h-[16rem] h-64">
     <ng-container *ngFor="let picture of project.pictures; let i = index">
       <img *angularCarouselSlide
@@ -16,8 +15,8 @@
         <div *ngFor="let language of project.languages; let i = index">{{language}} &nbsp; </div>
         <div *ngFor="let techno of project.technos">{{techno}} &nbsp;</div>
       </div>
-      <a [href]="project.link" target="_blank" class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline">{{project.name}}</a>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{project.description}}</p>
+      <h1 class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white">{{project.name}}</h1>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{project.shortDescription}}</p>
     </div>
 
     <div class="mt-4">

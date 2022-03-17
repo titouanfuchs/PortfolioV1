@@ -14,6 +14,8 @@ import { CompetenceComponent } from './components/elements/competence/competence
 import { ProjectComponent } from './components/elements/project/project.component';
 import {CarouselModule} from "@marcreichel/angular-carousel";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from "@angular/material/dialog";
+import {ProjectDialogComponent} from "./components/elements/project/dialog/project-dialog/project-dialog.component";
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     NewsComponent,
     CompetenceComponent,
-    ProjectComponent
+    ProjectComponent,
+    ProjectDialogComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
