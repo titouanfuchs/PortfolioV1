@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CompetenceComponent } from './components/elements/competence/competence.component';
 import { ProjectComponent } from './components/elements/project/project.component';
 import {CarouselModule} from "@marcreichel/angular-carousel";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {CarouselModule} from "@marcreichel/angular-carousel";
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
