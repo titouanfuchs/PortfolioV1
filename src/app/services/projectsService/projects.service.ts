@@ -48,13 +48,23 @@ export class ProjectsService {
     //   technos:["Angular", "TailwindCSS", "MySQL", "NestJS", "TypeORM", "Swagger"],
     //   date:"2022"
     // },
-    {name:"Portfolio",
+    {
+      name:"Portfolio",
       shortDescription:"Mon portfolio.",
       description:"Projet de portfolio, réalisé avec Angular et Tailwindcss.",
       languages:["TypeScript", "CSS"],
       technos:["Angular", "TailwindCSS"],
       date:"2022"
     },
+    {
+      name:"Fil-Rouge 4.0.1",
+      shortDescription:"Projet réalisé dans le cadre du fil-rouge de la formation UHA 4.0.1 . Le projet à été réalisé une fois totalement en PHP et Javascript, puis une seconde fois en PHP et Angular.",
+      description: "Le but était de comprendre les bases du Web. Plusieurs API étaient fournies pour que l'on s'en serve dans le but de les afficher sur un site fais nous même. On devais y intégrer : Base de données, pagination, dynamisation en js. Il était ensuite possible d'approfondir en refaisant la même chose avec un Framework, dans mon cas Angular.",
+      languages: ['TypeScript', 'JavaScript','PHP', "SQL", "CSS"],
+      technos: ['Angular', 'MySQL', 'Bootstrap', "API Rest"],
+      date:"Septembre 2021",
+      pictures:['401_01.webp', '401_02.webp']
+    }
   ]
 
   public getAllProjects(){
