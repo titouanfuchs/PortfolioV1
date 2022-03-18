@@ -2,7 +2,7 @@
   <ng-container *ngFor="let picture of project.pictures; let i = index">
     <img *angularCarouselSlide
          [src]="'assets/pictures/projects/' + picture"
-         class="block w-full"
+         class="block h-full max-h-[30rem]"
          alt="Project Picture"
     />
   </ng-container>

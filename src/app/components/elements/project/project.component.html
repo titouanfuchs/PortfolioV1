@@ -1,9 +1,9 @@
 <div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none" (click)="openProjectDetails()">
-  <angular-carousel [bullets]="false" class="w-full min-h-[16rem] h-64">
-    <ng-container *ngFor="let picture of project.pictures; let i = index">
+  <angular-carousel [bullets]="false" class="w-full min-h-[16rem] h-64 max-h-[16rem]">
+    <ng-container *ngFor="let picture of project.pictures; let i = index" class="content-center">
       <img *angularCarouselSlide
         [src]="'assets/pictures/projects/' + picture"
-        class="block w-full"
+        class="block h-full max-h-[16rem]"
         alt="Project Picture"
       />
     </ng-container>

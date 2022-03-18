@@ -11,20 +11,24 @@ export class ProjectsService {
   private projectList:IProject[] = [
     {name:"Symesis",
       shortDescription:"Prototype de Jeu vidéo sur PC. RPG Open-World développé en équipe.",
+      description: "Symesis est mon premier vrai projet de jeu vidéo en équipe. Le but était de réaliser un jeu RPG Open-World dans un univers fantastique. Le jeu inclu un système d'inventaire, une météo dynamique (déclenchement de la pluie de manière aléatoire, et cycle jour/nuit), un système de combat contre des cibles d'entrainement ainsi que quelques énemies basique.",
       languages:["C#"],
       technos:["Unity Engine", "Prototype"],
       date:"2018-2019"
     },
     {name:"Kronophase",
       shortDescription:"Prototype de Jeu vidéo sur PC. Die and Retry développé en équipe.",
+      description: "Kronophase est un jeu de type Die and Retry. Il inclu des technologies comme la génération procédurale de niveaux et un système d'énemies. Le jeu est un prototype. Une démo est disponible.",
       languages:["C#"],
       technos:["Unity Engine", "Prototype"],
       date:"2019-2020"
     },
     {name:"WordDrop",
       shortDescription:"Jeu Vidéo mobile et PC développé avec le moteur de jeu Unity Engine.",
+      description:"WordDrop est un jeu de lettres. Le principe est simple : des lettres tombent, une fois qu'elles ont touchées le sol, il faut créer des mots plus ou moins complexes pour générer des points. Le but est de faire le score le plus élevé.Le jeu inclu un système de tableau des scores en ligne. WordDrop est disponible sur le Windows Store (Windows 10 et Windows 11).",
       languages:["C#"],
       technos:["Unity Engine", "Android", "UWP", "WIP"],
+      pictures:['worddrop_01.webp', 'worddrop_02.webp', 'worddrop_03.webp', 'worddrop_04.webp', 'worddrop_05.webp'],
       date:"2020-2021"
     },
     {name:"Editeur de mugs",
@@ -36,7 +40,8 @@ export class ProjectsService {
       pictures:["mug_01.webp", "mug_02.webp"]
     },
     {name:"Trace Colmar : Chatbot",
-      shortDescription:"Un chatbot conçu pour le site internet de la compagnie de transport Trace à Colmar.",
+      shortDescription:"Un chatbot avec espace administrateur (gestion du chatbot et statistiques) conçu pour le site internet de la compagnie de transport Trace à Colmar.",
+      description:"Un Chabot sur-mesure personnalisable avec un espace administrateur. L'espace administrateur permet des réglages avancés du chatbot (Message de bienvenue, message d'erreur, message de non compréhension, ainsi que touts les autres messages). Chaque requête au chabot génère des statistiques visualisables dans l'espace administrateur.",
       languages:["TypeScript", "CSS"],
       technos:["Angular", "TailwindCSS", "MySQL", "NestJS", "TypeORM", "Swagger"],
       date:"2022"
