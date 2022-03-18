@@ -18,10 +18,11 @@ export class ProjectsService {
     },
     {name:"Kronophase",
       shortDescription:"Prototype de Jeu vidéo sur PC. Die and Retry développé en équipe.",
-      description: "Kronophase est un jeu de type Die and Retry. Il inclu des technologies comme la génération procédurale de niveaux et un système d'énemies. Le jeu est un prototype. Une démo est disponible.",
+      description: "Kronophase est un jeu de type Die and Retry. Il inclu des technologies comme la génération procédurale de niveaux, un système d'énemies, et l'intégration de Discord Rich Presence. Le jeu est un prototype. Une démo est disponible.",
       languages:["C#"],
       technos:["Unity Engine", "Prototype"],
-      date:"2019-2020"
+      date:"2019-2020",
+      pictures:['kronophase_01.webp', 'kronophase_02.webp', 'kronophase_03.webp']
     },
     {name:"WordDrop",
       shortDescription:"Jeu Vidéo mobile et PC développé avec le moteur de jeu Unity Engine.",
@@ -39,13 +40,13 @@ export class ProjectsService {
       date:"2021-2022",
       pictures:["mug_01.webp", "mug_02.webp"]
     },
-    {name:"Trace Colmar : Chatbot",
-      shortDescription:"Un chatbot avec espace administrateur (gestion du chatbot et statistiques) conçu pour le site internet de la compagnie de transport Trace à Colmar.",
-      description:"Un Chabot sur-mesure personnalisable avec un espace administrateur. L'espace administrateur permet des réglages avancés du chatbot (Message de bienvenue, message d'erreur, message de non compréhension, ainsi que touts les autres messages). Chaque requête au chabot génère des statistiques visualisables dans l'espace administrateur.",
-      languages:["TypeScript", "CSS"],
-      technos:["Angular", "TailwindCSS", "MySQL", "NestJS", "TypeORM", "Swagger"],
-      date:"2022"
-    },
+    // {name:"Trace Colmar : Chatbot",
+    //   shortDescription:"Un chatbot avec espace administrateur (gestion du chatbot et statistiques) conçu pour le site internet de la compagnie de transport Trace à Colmar.",
+    //   description:"Un Chabot sur-mesure personnalisable avec un espace administrateur. L'espace administrateur permet des réglages avancés du chatbot (Message de bienvenue, message d'erreur, message de non compréhension, ainsi que touts les autres messages). Chaque requête au chabot génère des statistiques visualisables dans l'espace administrateur.",
+    //   languages:["TypeScript", "CSS"],
+    //   technos:["Angular", "TailwindCSS", "MySQL", "NestJS", "TypeORM", "Swagger"],
+    //   date:"2022"
+    // },
     {name:"Portfolio",
       shortDescription:"Mon portfolio.",
       description:"Projet de portfolio, réalisé avec Angular et Tailwindcss.",
