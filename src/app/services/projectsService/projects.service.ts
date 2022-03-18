@@ -14,7 +14,8 @@ export class ProjectsService {
       description: "Symesis est mon premier vrai projet de jeu vidéo en équipe. Le but était de réaliser un jeu RPG Open-World dans un univers fantastique. Le jeu inclu un système d'inventaire, une météo dynamique (déclenchement de la pluie de manière aléatoire, et cycle jour/nuit), un système de combat contre des cibles d'entrainement ainsi que quelques énemies basique.",
       languages:["C#"],
       technos:["Unity Engine", "Prototype"],
-      date:"2018-2019"
+      date:"2018-2019",
+      pictures:["symesis_01.webp", "symesis_02.webp", "symesis_03.webp"]
     },
     {name:"Kronophase",
       shortDescription:"Prototype de Jeu vidéo sur PC. Die and Retry développé en équipe.",
