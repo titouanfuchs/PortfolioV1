@@ -1,33 +1,13 @@
-<div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none">
-  <div class="carousel slide relative w-full h-64" data-bs-ride="carousel">
-    <div class="carousel-inner relative w-full overflow-hidden">
-      <div *ngFor="let picture of project.pictures; let i = index" class="carousel-item active relative float-left w-full">
-        <img
-          [src]="'assets/pictures/projects/' + picture"
-          class="block w-full"
-          alt="Project Picture {{i}}"
-        />
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-      type="button"
-      data-bs-target="#carouselExampleControls"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-      type="button"
-      data-bs-target="#carouselExampleControls"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+<div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none cursor-pointer hover:ring-1 ring-blue-700 p-2" (click)="openProjectDetails()">
+  <angular-carousel [bullets]="false" class="w-full min-h-[16rem] h-64 max-h-[16rem]">
+    <ng-container *ngFor="let picture of project.pictures; let i = index" class="content-center">
+      <img *angularCarouselSlide
+        [src]="'assets/pictures/projects/' + picture"
+        class="block h-full max-h-[16rem]"
+        alt="Project Picture"
+      />
+    </ng-container>
+  </angular-carousel>
 
   <div class="p-6">
     <div>
@@ -35,8 +15,8 @@
         <div *ngFor="let language of project.languages; let i = index">{{language}} &nbsp; </div>
         <div *ngFor="let techno of project.technos">{{techno}} &nbsp;</div>
       </div>
-      <a [href]="project.link" target="_blank" class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline">{{project.name}}</a>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{project.description}}</p>
+      <h1 class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white">{{project.name}}</h1>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{project.shortDescription}}</p>
     </div>
 
     <div class="mt-4">

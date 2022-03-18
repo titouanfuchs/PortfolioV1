@@ -1,7 +1,9 @@
+@import "~@marcreichel/angular-carousel/css/main.css";
+@import "~@marcreichel/angular-carousel/themes/stripes.css";
+@import "~@marcreichel/angular-carousel/themes/dots.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* You can add global styles to this file, and also import other style files */
 
 body{
   background-color: #1f2937;
@@ -10,3 +12,10 @@ body{
   background-position: left top;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-dialog-container {
+  background-color: #1f2937 !important;
+}
