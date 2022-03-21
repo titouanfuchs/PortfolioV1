@@ -16,6 +16,7 @@ import {CarouselModule} from "@marcreichel/angular-carousel";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import {ProjectDialogComponent} from "./components/elements/project/dialog/project-dialog/project-dialog.component";
+import {UpdateComponent} from "./components/elements/update/update.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ProjectDialogComponent} from "./components/elements/project/dialog/proje
     NewsComponent,
     CompetenceComponent,
     ProjectComponent,
-    ProjectDialogComponent
+    ProjectDialogComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
