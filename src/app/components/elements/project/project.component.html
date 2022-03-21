@@ -1,4 +1,4 @@
-<div class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none cursor-pointer hover:ring-1 ring-blue-700 p-2" (click)="openProjectDetails()">
+<div mat-ripple class="mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 grow-0 w-[30rem] shrink-0 flex-none cursor-pointer hover:ring-1 ring-blue-700 p-2" (click)="openProjectDetails()">
   <angular-carousel [bullets]="false" class="w-full min-h-[16rem] h-64 max-h-[16rem]">
     <ng-container *ngFor="let picture of project.pictures; let i = index" class="content-center">
       <img *angularCarouselSlide

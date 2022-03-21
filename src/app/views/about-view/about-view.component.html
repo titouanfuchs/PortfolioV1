@@ -1,10 +1,10 @@
 <section class="bg-white dark:bg-gray-800 mb-1 shadow sticky">
   <div class="flex dark:border-gray-700 justify-center">
-    <button (click)="changeTab(0)" class="text-white h-10 px-4 py-2 -mb-px text-sm text-center bg-transparent whitespace-nowrap border-b-2 border-transparent" [ngClass]="{'dark:text-blue-300 border-blue-400':Tab === 0, 'hover:border-gray-400':Tab !== 0}">
+    <button mat-ripple (click)="changeTab(0)" class="text-white h-10 px-4 py-2 -mb-px text-sm text-center bg-transparent whitespace-nowrap border-b-2 border-transparent" [ngClass]="{'dark:text-blue-300 border-blue-400':Tab === 0, 'hover:border-gray-400':Tab !== 0}">
       Profile
     </button>
 
-    <button (click)="changeTab(1)" class="text-white h-10 px-4 py-2 -mb-px text-sm text-center bg-transparent whitespace-nowrap border-b-2 border-transparent" [ngClass]="{'dark:text-blue-300 border-blue-400':Tab === 1, 'hover:border-gray-400':Tab !== 1}">
+    <button mat-ripple (click)="changeTab(1)" class="text-white h-10 px-4 py-2 -mb-px text-sm text-center bg-transparent whitespace-nowrap border-b-2 border-transparent" [ngClass]="{'dark:text-blue-300 border-blue-400':Tab === 1, 'hover:border-gray-400':Tab !== 1}">
       Compétences
     </button>
   </div>
