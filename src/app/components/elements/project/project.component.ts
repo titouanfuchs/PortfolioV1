@@ -20,7 +20,7 @@ export class ProjectComponent implements OnInit {
   openProjectDetails(){
     const dialogRef = this.dialog.open(ProjectDialogComponent, {
       width: "60rem",
-      minHeight: "60rem",
+      minHeight: "30rem",
       data: this.project
     })
   }

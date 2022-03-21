@@ -63,7 +63,17 @@ export class ProjectsService {
       languages: ['TypeScript', 'JavaScript','PHP', "SQL", "CSS"],
       technos: ['Angular', 'MySQL', 'Bootstrap', "API Rest"],
       date:"Septembre 2021",
-      pictures:['401_01.webp', '401_02.webp']
+      pictures:['401_01.webp', '401_02.webp'],
+      links:[
+        {
+          url: "https://gitlab.com/uha40/401/fil-rouge",
+          title: "Git Fil-Rouge"
+        },
+        {
+          url: "https://gitlab.com/uha40/401/fil-rouge-angular",
+          title: "Git Fil-Rouge Angular"
+        }
+      ]
     }
   ]
 
