@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Ihobby} from "../../../interfaces/ihobby";
 
 @Component({
   selector: 'app-hobby',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hobby.component.css']
 })
 export class HobbyComponent implements OnInit {
+
+  @Input() hobby:Ihobby = {};
 
   constructor() { }
 
