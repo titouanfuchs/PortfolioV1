@@ -1,3 +1,5 @@
+import {ILink} from "./ilink";
+
 export interface IProject {
   name?:string;
   pictures?:string[];
@@ -5,6 +7,6 @@ export interface IProject {
   description?:string;
   languages?:string[];
   technos?:string[];
-  link?:string;
+  links?:ILink[];
   date?:string;
 }

@@ -31,7 +31,13 @@ export class ProjectsService {
       languages:["C#"],
       technos:["Unity Engine", "Android", "UWP", "WIP"],
       pictures:['worddrop_01.webp', 'worddrop_02.webp', 'worddrop_03.webp', 'worddrop_04.webp', 'worddrop_05.webp'],
-      date:"2020-2021"
+      date:"2020-2021",
+      links:[
+        {
+          title: "WordDrop - Windows Store",
+          url: "https://www.microsoft.com/fr-fr/p/worddrop-the-fall-of-letters/9n25nczt30gv#activetab=pivot:overviewtab"
+        }
+      ]
     },
     {name:"Editeur de mugs",
       shortDescription:"Un editeur conçu pour la personnalisation de mugs pour Design&Concept.",
@@ -39,7 +45,13 @@ export class ProjectsService {
       languages:["TypeScript", "CSS"],
       technos:["Angular", "TailwindCSS"],
       date:"2021-2022",
-      pictures:["mug_01.webp", "mug_02.webp"]
+      pictures:["mug_01.webp", "mug_02.webp"],
+      links:[
+        {
+          url:"https://www.designetconcept.fr/design.php?",
+          title: "Design&Concept - Personnalisation de mugs"
+        }
+      ]
     },
     // {name:"Trace Colmar : Chatbot",
     //   shortDescription:"Un chatbot avec espace administrateur (gestion du chatbot et statistiques) conçu pour le site internet de la compagnie de transport Trace à Colmar.",
@@ -63,7 +75,17 @@ export class ProjectsService {
       languages: ['TypeScript', 'JavaScript','PHP', "SQL", "CSS"],
       technos: ['Angular', 'MySQL', 'Bootstrap', "API Rest"],
       date:"Septembre 2021",
-      pictures:['401_01.webp', '401_02.webp']
+      pictures:['401_01.webp', '401_02.webp'],
+      links:[
+        {
+          url: "https://gitlab.com/uha40/401/fil-rouge",
+          title: "Git Fil-Rouge"
+        },
+        {
+          url: "https://gitlab.com/uha40/401/fil-rouge-angular",
+          title: "Git Fil-Rouge Angular"
+        }
+      ]
     }
   ]
 

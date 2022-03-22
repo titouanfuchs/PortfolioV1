@@ -16,6 +16,9 @@ import {CarouselModule} from "@marcreichel/angular-carousel";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import {ProjectDialogComponent} from "./components/elements/project/dialog/project-dialog/project-dialog.component";
+import {UpdateComponent} from "./components/elements/update/update.component";
+import {HobbyComponent} from "./components/elements/hobby/hobby.component";
+import {MatRippleModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -28,15 +31,18 @@ import {ProjectDialogComponent} from "./components/elements/project/dialog/proje
     NewsComponent,
     CompetenceComponent,
     ProjectComponent,
-    ProjectDialogComponent
+    ProjectDialogComponent,
+    UpdateComponent,
+    HobbyComponent,
   ],
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
-    CarouselModule,
-    BrowserAnimationsModule,
-    MatDialogModule
-  ],
+    imports: [
+        BrowserModule.withServerTransition({appId: 'serverApp'}),
+        AppRoutingModule,
+        CarouselModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        MatRippleModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
