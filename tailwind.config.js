@@ -1,7 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}", './node_modules/tw-elements/dist/js/**/*.js'],
+  content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'bg': "url('./src/assets/lightBulb.webp')",
+      }
+    }
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 }

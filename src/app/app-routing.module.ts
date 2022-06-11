@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeViewComponent} from "./views/home-view/home-view.component";
-import {ProjectsViewComponent} from "./views/projects-view/projects-view.component";
-import {AboutViewComponent} from "./views/about-view/about-view.component";
+import {ExperimentationComponent} from "./routes/experimentation/experimentation.component";
+import {PcversionComponent} from "./routes/pcversion/pcversion.component";
 
 const routes: Routes = [
-  //{ path: '', component: },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeViewComponent},
-  { path: 'about', component: AboutViewComponent},
-  { path: 'projects', component: ProjectsViewComponent},
+  {
+    path: '',
+    component: ExperimentationComponent,
+    title: 'Experimentation'  // <-- Page title
+  },
+  {
+    path: 'pc-version',
+    component: PcversionComponent,
+    title: 'Titouan FUCHS - PC Version'  // <-- Page title
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

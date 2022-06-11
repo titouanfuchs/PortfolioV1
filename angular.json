@@ -1,18 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "p_front": {
+    "PortFolioV2": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/p_front/browser",
+            "outputPath": "dist/port-folio-v2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,11 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "p_front:build:production"
+              "browserTarget": "PortFolioV2:build:production"
             },
             "development": {
-              "browserTarget": "p_front:build:development",
-              "proxyConfig": "src/proxy/dev.proxy.config.json"
+              "browserTarget": "PortFolioV2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "p_front:build"
+            "browserTarget": "PortFolioV2:build"
           }
         },
         "test": {
@@ -103,67 +95,8 @@
             ],
             "scripts": []
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/p_front/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "p_front:build:development",
-              "serverTarget": "p_front:server:development"
-            },
-            "production": {
-              "browserTarget": "p_front:build:production",
-              "serverTarget": "p_front:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "p_front:build:production",
-              "serverTarget": "p_front:server:production"
-            },
-            "development": {
-              "browserTarget": "p_front:build:development",
-              "serverTarget": "p_front:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
-  },
-  "defaultProject": "p_front"
+  }
 }

@@ -3,46 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { HomeViewComponent } from './views/home-view/home-view.component';
-import { ProjectsViewComponent } from './views/projects-view/projects-view.component';
-import { AboutViewComponent } from './views/about-view/about-view.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NewsComponent } from './components/news/news.component';
-import {HttpClientModule} from "@angular/common/http";
-import { CompetenceComponent } from './components/elements/competence/competence.component';
-import { ProjectComponent } from './components/elements/project/project.component';
-import {CarouselModule} from "@marcreichel/angular-carousel";
+import { ExperimentationComponent } from './routes/experimentation/experimentation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDialogModule} from "@angular/material/dialog";
-import {ProjectDialogComponent} from "./components/elements/project/dialog/project-dialog/project-dialog.component";
-import {UpdateComponent} from "./components/elements/update/update.component";
-import {HobbyComponent} from "./components/elements/hobby/hobby.component";
-import {MatRippleModule} from "@angular/material/core";
+import {DragDropModule} from "@angular/cdk/drag-drop";
+import {MatDividerModule} from "@angular/material/divider";
+import { PcversionComponent } from './routes/pcversion/pcversion.component';
+import { AboutWindowComponent } from './routes/pcversion/components/about-window/about-window.component';
+import { TitleBarComponent } from './routes/pcversion/components/title-bar/title-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    HomeViewComponent,
-    ProjectsViewComponent,
-    AboutViewComponent,
-    FooterComponent,
-    NewsComponent,
-    CompetenceComponent,
-    ProjectComponent,
-    ProjectDialogComponent,
-    UpdateComponent,
-    HobbyComponent,
+    ExperimentationComponent,
+    PcversionComponent,
+    AboutWindowComponent,
+    TitleBarComponent
   ],
-    imports: [
-        BrowserModule.withServerTransition({appId: 'serverApp'}),
-        AppRoutingModule,
-        CarouselModule,
-        BrowserAnimationsModule,
-        MatDialogModule,
-        MatRippleModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    DragDropModule,
+    MatDividerModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
