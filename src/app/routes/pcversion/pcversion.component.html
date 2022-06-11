@@ -1,6 +1,37 @@
 <div class="w-screen h-screen flex flex-col bg-gradient-to-br from-sky-500 to-indigo-500">
   <div class="flex-grow grow boundary">
-    <app-about-window></app-about-window>
+    <div class="flex flex-row w-full h-full">
+      <div class="flex flex-col h-full w-28">
+        <div class="w-full h-fit p-2 select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-fill w-full h-12" viewBox="0 0 16 16">
+            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
+          </svg>
+          <p class="text-center">A Propos</p>
+        </div>
+
+        <div class="w-full h-fit p-2 select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-fill w-full h-12" viewBox="0 0 16 16">
+            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
+          </svg>
+          <p class="text-center">Mes Passions</p>
+        </div>
+
+        <div class="w-full h-fit p-2 select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-fill w-full h-12" viewBox="0 0 16 16">
+            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
+          </svg>
+          <p class="text-center">Mes Compétences</p>
+        </div>
+
+        <div class="w-full h-fit p-2 select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-fill w-full h-12" viewBox="0 0 16 16">
+            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
+          </svg>
+          <p class="text-center">Mes Projets</p>
+        </div>
+      </div>
+      <app-about-window></app-about-window>
+    </div>
   </div>
   <div class="h-12 bg-gray-800 shadow-2xl flex-row flex">
     <div class="w-20 h-full p-2 text-white">
@@ -14,9 +45,7 @@
     </div>
     <mat-divider vertical="true"></mat-divider>
     <div class="w-20 h-full p-2 text-white z-50">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box2-fill w-full h-full" viewBox="0 0 16 16">
-        <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
-      </svg>
+      <p class="text-center">{{now}}</p>
     </div>
   </div>
 </div>
