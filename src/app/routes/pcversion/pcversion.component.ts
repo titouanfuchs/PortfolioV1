@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WindowService} from "./services/window.service";
 
 @Component({
   selector: 'app-pcversion',
@@ -9,10 +10,14 @@ export class PcversionComponent implements OnInit {
 
   public now:string = "00:00";
 
-  constructor() { }
+  constructor(public WindowService:WindowService) { }
 
   ngOnInit(): void {
     this.refreshTime();
+
+    this.WindowService.WindowUpdateSubject.subscribe((event)=>{
+
+    })
   }
 
   refreshTime(){

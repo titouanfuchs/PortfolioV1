@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-title-bar',
@@ -7,11 +7,17 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TitleBarComponent implements OnInit {
 
+  @Output() windowEvent = new EventEmitter<number>();
+
   @Input() title:string = "Nouvelle Fenêtre";
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public doEvent(type:number){
+    this.windowEvent.emit(type);
   }
 
 }
